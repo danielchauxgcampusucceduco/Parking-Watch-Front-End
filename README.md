@@ -2,7 +2,7 @@
 
 Página web privada de la oficina de tránsito (Módulo 1 del documento v6): React 19 + TypeScript
 
-- Vite, publicable en **Coolify** con el `Dockerfile` incluido (o en Vercel como sitio estático). Consume la API REST del Backend (tipos
+- Vite, publicada en **Vercel** como sitio estático (también publicable en Coolify con el `Dockerfile` incluido). Consume la API REST del Backend (tipos
   generados desde su OpenAPI) y el WebSocket STOMP para el video en vivo, las detecciones y los
   reportes nuevos.
 
@@ -24,4 +24,4 @@ pnpm gen:api                    # regenera src/api/schema.d.ts desde ../Parking-
 ```
 
 El JWT se guarda solo en memoria (recargar la página pide iniciar sesión de nuevo) y se renueva
-antes de vencer. `vercel.json` define la publicación en Vercel. Para Coolify, el `Dockerfile` compila la SPA y Nginx sirve rutas de SPA, salud y cabeceras de seguridad; las URLs `VITE_API_URL` y `VITE_WS_URL` se configuran como argumentos de construcción.
+antes de vencer. `vercel.json` define la publicación en Vercel. Las variables de producción son `VITE_BACKEND_API_URL` y `VITE_BACKEND_WS_URL` (compatibles con las antiguas `VITE_API_URL`/`VITE_WS_URL`). Para Coolify, el `Dockerfile` compila la SPA y Nginx sirve rutas de SPA, salud y cabeceras de seguridad; se pasan las mismas variables como argumentos de construcción.
