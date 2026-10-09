@@ -20,7 +20,7 @@ pnpm dev                        # http://localhost:5173
 pnpm lint && pnpm typecheck
 pnpm test:coverage              # Vitest, cobertura >= 70 %
 pnpm test:e2e                   # Playwright (E2E_BASE_URL para probar un despliegue)
-pnpm gen:api                    # regenera src/api/schema.d.ts desde ../cupo-backend/docs/openapi.json
+pnpm gen:api                    # regenera src/api/schema.d.ts desde ../Parking-Watch-Back-1/docs/openapi.json
 ```
 
 El JWT se guarda solo en memoria (recargar la página pide iniciar sesión de nuevo) y se renueva
