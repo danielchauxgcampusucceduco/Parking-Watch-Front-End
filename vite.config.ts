@@ -2,7 +2,7 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
-// Sitio estático para Vercel (SPA). Las URLs del backend llegan por VITE_API_URL y VITE_WS_URL.
+// SPA estática. Las URLs del backend llegan por VITE_API_URL y VITE_WS_URL.
 export default defineConfig({
   plugins: [react()],
   build: { sourcemap: false },
